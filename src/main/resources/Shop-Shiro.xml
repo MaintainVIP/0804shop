@@ -35,26 +35,26 @@
         </property>
         <!--过滤器链的定义-->
         <!--具体需要拦截哪些url 以及访问url使用shiro的什么filter-->
-        <property name="filterChainDefinitions">
-            <value>
-                /js/**=anon
-                /img/**=anon
-                /css/**=anon
-                /assets/**=anon
-                /font/**=anon
-                /images/**=anon
-                /products**=anon
-                <!--登陆认证的地址 如果进行了自定义的loginURL保持一致-->
-                /loginsubmit=authc
+        <!--<property name="filterChainDefinitions">-->
+            <!--<value>-->
+                <!--/js/**=anon-->
+                <!--/img/**=anon-->
+                <!--/css/**=anon-->
+                <!--/assets/**=anon-->
+                <!--/font/**=anon-->
+                <!--/images/**=anon-->
+                <!--/products**=anon-->
+                <!--&lt;!&ndash;登陆认证的地址 如果进行了自定义的loginURL保持一致&ndash;&gt;-->
+                <!--/loginsubmit=authc-->
 
-                /logout=logout
-                <!--测试授权-->
-                /item=roles[admin],authc
-                <!--剩余所有的都需要登陆才negative访问-->
-                /**=user
+                <!--/logout=logout-->
+                <!--&lt;!&ndash;测试授权&ndash;&gt;-->
+                <!--/item=roles[admin],authc-->
+                <!--&lt;!&ndash;剩余所有的都需要登陆才negative访问&ndash;&gt;-->
+                <!--/**=user-->
 
-            </value>
-        </property>
+            <!--</value>-->
+        <!--</property>-->
     </bean>
 
 
