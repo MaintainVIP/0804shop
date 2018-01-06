@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class login {
-//我考的风格
+    //测试代码:测试分支
     @RequestMapping("/login")
     public String login(){
         return "login";
