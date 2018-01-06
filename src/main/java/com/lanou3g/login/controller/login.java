@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class login {
 
 
+    //登录不用我写
     @RequestMapping("/login")
     public String login(){
         return "login";
