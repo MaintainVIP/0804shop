@@ -5,54 +5,5 @@
     <result column="role_id" jdbcType="INTEGER" property="roleId" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
   </resultMap>
-  <insert id="insert" parameterType="com.lanou3g.bean.TbRoleUser">
-    insert into tb_role_user (role_id, user_id)
-    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="com.lanou3g.bean.TbRoleUser">
-    insert into tb_role_user
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        role_id,
-      </if>
-      <if test="userId != null">
-        user_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        #{roleId,jdbcType=INTEGER},
-      </if>
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <resultMap id="BaseResultMap" type="com.lanou3g.bean.TbRoleUser">
-    <result column="role_id" jdbcType="INTEGER" property="roleId" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-  </resultMap>
-  <insert id="insert" parameterType="com.lanou3g.bean.TbRoleUser">
-    insert into tb_role_user (role_id, user_id)
-    values (#{roleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="com.lanou3g.bean.TbRoleUser">
-    insert into tb_role_user
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        role_id,
-      </if>
-      <if test="userId != null">
-        user_id,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        #{roleId,jdbcType=INTEGER},
-      </if>
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
+
 </mapper>

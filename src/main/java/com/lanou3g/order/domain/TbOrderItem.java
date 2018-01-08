@@ -1,4 +1,4 @@
-package com.lanou3g.bean;
+package com.lanou3g.order.domain;
 
 public class TbOrderItem {
     private String id;
