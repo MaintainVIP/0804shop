@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou3g.mapper.TbModuleMapper">
+  <resultMap id="BaseResultMap" type="com.lanou3g.bean.TbModule">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="module_desc" jdbcType="VARCHAR" property="moduleDesc" />
+  </resultMap>
+  <insert id="insert" parameterType="com.lanou3g.bean.TbModule">
+    insert into tb_module (id, name, module_desc
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{moduleDesc,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lanou3g.bean.TbModule">
+    insert into tb_module
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="moduleDesc != null">
+        module_desc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="moduleDesc != null">
+        #{moduleDesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
